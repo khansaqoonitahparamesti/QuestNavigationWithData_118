@@ -33,7 +33,7 @@ import com.example.arsitekturmvvm.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FormIsian(pilihanJK: List<String>,
+fun FormIsian(PilihanJK: List<String>,
               onSubmitButtonClicked : (MutableList<String>) -> Unit,
               modifier: Modifier = Modifier
 ) {
