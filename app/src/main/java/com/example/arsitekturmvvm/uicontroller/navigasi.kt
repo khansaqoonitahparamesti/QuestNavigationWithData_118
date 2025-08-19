@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.arsitekturmvvm.view.TampilData
 import com.example.arsitekturmvvm.view.FormIsian
+import com.example.arsitekturmvvm.viewmodel.SiswaViewModel
 
 enum class Navigasi {
     Formulir,
@@ -18,6 +19,7 @@ enum class Navigasi {
 
 @Composable
 fun DataApp(
+    viewModel: SiswaViewModel
     navController: NavHostController = rememberNavController()
 ) {
     Scaffold { paddingValues ->
