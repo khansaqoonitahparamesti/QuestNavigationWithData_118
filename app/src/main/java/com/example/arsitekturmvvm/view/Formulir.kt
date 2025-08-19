@@ -40,6 +40,7 @@ fun FormIsian(pilihanJK: List<String>,
 ) {
     var txtNama by rememberSaveable { mutableStateOf(("")) }
     var txtAlamat by remember { mutableStateOf("") }
+    var txtGender by remember { mutableStateOf("") }
 
 
 
@@ -51,7 +52,7 @@ fun FormIsian(pilihanJK: List<String>,
             )
         }
     ) { paddingValues ->
-        IsiRuang(paddingValues, jenisK, selected) { newSelected ->
+        IsiRuang(paddingValues,JenisK, selected) { newSelected ->
             selected = newSelected
         }
     }
