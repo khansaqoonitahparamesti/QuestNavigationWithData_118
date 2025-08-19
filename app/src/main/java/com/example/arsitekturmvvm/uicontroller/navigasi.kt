@@ -44,6 +44,7 @@ fun DataApp(
             }
             composable(route = Navigasi.Detail.name) {
                 TampilData(
+                    statusUISiswa= uistate.value,
                     onBackBtnClick = {
                         cancelAndBackToFormulir(navController)
                     }
