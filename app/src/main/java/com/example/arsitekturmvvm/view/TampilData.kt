@@ -32,9 +32,9 @@ import com.example.arsitekturmvvm.model.DataSiswa
 fun TampilData(statusUiSiswa: DataSiswa,
                onBackButtonClicked: () -> Unit) {
     val items = listOf(
-        Pair(first = stringResource(id = R.string.nama_lengkap), second = "Bening Namira"),
-        Pair(first = stringResource(id = R.string.jenis_kelamin), second = "Laki-laki"),
-        Pair(first = stringResource(id = R.string.alamat), second = "Yogyakarta")
+        Pair(first = "Nama Lengkap", second = statusUiSiswa.nama),
+        Pair(first = "Jenis Kelamin", second = statusUiSiswa.gender),
+        Pair(first = "Alamat", second = statusUiSiswa.alamat),
     )
 
     Scaffold(
