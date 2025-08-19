@@ -102,7 +102,7 @@ fun FormIsian(pilihanJK: List<String>,
             }
             Divider(
                 thickness = dimensionResource(1dp),
-                modifier = M odifier
+                modifier = Modifier
                     .padding(all = 5.dp)
                     .width(250.dp)
             )
