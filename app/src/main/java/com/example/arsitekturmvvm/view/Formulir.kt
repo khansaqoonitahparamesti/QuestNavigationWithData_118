@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -29,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
 import com.example.arsitekturmvvm.R
 
@@ -46,15 +48,21 @@ fun FormIsian(pilihanJK: List<String>,
 
 
     Scaffold(
-        topBar = {
+        modifier, {
             TopAppBar(
                 title = { Text(text = stringResource(id = R.string.nama_lengkap), color = Color.White) },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
             )
-        }
-    ) { paddingValues ->
-        IsiRuang(paddingValues,JenisK, selected) { newSelected ->
-            selected = newSelected
+        }) { isiRuang ->
+        Column(modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween,
+            horizontalAlignment = Alignment.CenterHorizontally)
+        {
+            OutlinedTextField(
+                value = txtNama,
+                singleline =true,
+                shape = MaterialTheme.shapes.medium
+            )
         }
     }
 }
