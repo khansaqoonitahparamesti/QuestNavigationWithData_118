@@ -44,8 +44,10 @@ fun TampilData(statusUiSiswa: DataSiswa,
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
             )
         }
-    ) { paddingValues ->
-        IsiRuang(paddingValues = paddingValues, items = items, onBackBtnClick = onBackBtnClick)
+    ) { isiRuang ->
+        Column( modifier =
+            Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween )
     }
 }
 
