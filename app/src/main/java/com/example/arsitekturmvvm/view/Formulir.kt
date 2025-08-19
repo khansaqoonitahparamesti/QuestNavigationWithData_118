@@ -39,6 +39,7 @@ fun FormIsian(pilihanJK: List<String>,
               modifier: Modifier = Modifier
 ) {
     var txtNama by rememberSaveable { mutableStateOf(("")) }
+    var txtAlamat by remember { mutableStateOf("") }
 
 
 
