@@ -40,7 +40,7 @@ fun TampilData(statusUiSiswa: DataSiswa,
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(id = R.string.tampilan_data), color = Color.White) },
+                title = { Text(text = "Data Siswa", color = Color.White)  },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
             )
         }
