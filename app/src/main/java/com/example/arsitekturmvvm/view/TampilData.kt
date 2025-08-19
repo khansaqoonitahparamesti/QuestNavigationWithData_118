@@ -67,7 +67,15 @@ fun TampilData(statusUiSiswa: DataSiswa,
                             fontSize = 16.sp
                         )
                     }
-                    Divider(thickness = 1.dp)
+                    Divider(thickness = dimensionResource(1dp) )
+                }
+                Spacer(modifier = Modifier.height(dimensionResource(10dp)))
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onBackButtonClicked
+                ) {
+                    Text(text = "Back")
                 }
             }
         }
