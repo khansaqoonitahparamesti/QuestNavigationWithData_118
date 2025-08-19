@@ -52,7 +52,7 @@ fun TampilData(statusUiSiswa: DataSiswa,
             Arrangement.SpaceBetween
         ){
             Column(
-                modifier = Modifier.padding(dimensionResource(16.dp)),
+                modifier = Modifier.padding(dimensionResource(16dp)),
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(10dp))
             ){
                 items.forEach { item ->
