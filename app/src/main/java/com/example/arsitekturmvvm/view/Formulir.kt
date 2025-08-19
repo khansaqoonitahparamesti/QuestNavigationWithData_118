@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,12 +34,13 @@ import com.example.arsitekturmvvm.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FormIsian(PilihanJK: List<String>,
+fun FormIsian(pilihanJK: List<String>,
               onSubmitButtonClicked : (MutableList<String>) -> Unit,
               modifier: Modifier = Modifier
 ) {
-    val jenisK = listOf("Laki-laki", "Perempuan")
-    var selected by remember { mutableStateOf("") }
+    var txtNama by rememberSaveable { mutableStateOf(("")) }
+
+
 
     Scaffold(
         topBar = {
