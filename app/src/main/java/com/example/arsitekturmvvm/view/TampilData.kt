@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -38,7 +39,8 @@ fun TampilData(statusUiSiswa: DataSiswa,
     )
 
     Scaffold(
-        topBar = {
+        Modifier,
+        {
             TopAppBar(
                 title = { Text(text = "Data Siswa", color = Color.White)  },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
@@ -47,7 +49,28 @@ fun TampilData(statusUiSiswa: DataSiswa,
     ) { isiRuang ->
         Column( modifier =
             Modifier.padding(isiRuang),
-            verticalArrangement = Arrangement.SpaceBetween )
+            Arrangement.SpaceBetween
+        ){
+            Column(
+                modifier = Modifier.padding(dimensionResource(16.dp)),
+                verticalArrangement = Arrangement.spacedBy(dimensionResource(10dp))
+            ){
+                items.forEach { item ->
+                    Column {
+                        Text(
+                            text = item.first.uppercase(),
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = item.second,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp
+                        )
+                    }
+                    Divider(thickness = 1.dp)
+                }
+            }
+        }
     }
 }
 
